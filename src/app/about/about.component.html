@@ -1,1 +1,16 @@
-<p>about works!</p>
+<form>
+    <label>Name</label>
+    <!-- twoway binding -->
+    <input type="text" name="fullName" [(ngModel)] = "fullName"/>
+    <!-- event binding -->
+    <label>MyDetails</label>
+    <input type="text" name="myDetails" [(ngModel)] = "myDetails" (keyup) = "myKeyUp()"/>
+    <p></p>
+    <button class="btn btn-primary" (click) ="doSave()">Click!</button>
+
+
+</form>
+
+Name : {{fullName}}
+<br>
+Salary : {{salary | number}}
